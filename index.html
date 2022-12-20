@@ -1,0 +1,64 @@
+<html>
+    <head>
+        <title>arial.codes</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+        <header>
+            <a href="#" class="logo">Arials Home Page</a>
+        </header>
+        <section>
+            <img src="stars.png" id="stars">
+            <img src="moon.png" id="moon">
+            <img src="mountains_behind.png" id="mountains_behind">
+            <h2 id="text">Welcome!</h2>
+            <a href="#sec" id="btn">Explore</a>
+            <img src="mountains_front.png" id="mountains_front">
+        </section>
+        <div class="sec" id="sec">
+            <h2>About me</h2>
+            <p>I'm a high school student based in Bulgaria. I'm passionate about building all types of 
+                applications and learning new technologies, frameworks, and languages. I'm currently studying
+                System Programming and I'm always, looking for new opportunities to learn and grow.
+                I'm also completely self-taught, so I'm planning to study a full-stack development course in the near
+                future as well as Computer Science. I'm currently working on getting better at designing and building 
+                websites and applications. <br> I'm also a big fan of serials, movies etc. I listen to a lot of German rap
+                as well as English rap, pop etc. I also have a favorite hobby which would be programming and you guessed it gaming. 
+                I spend most of my time watching youtube videos and I'm in love with the amount of content that is available to me. <br><br> </p>
+            <h2>Education</h2>
+            <p>I am currently a final year high school student studying System Programming. I am a co-leading student in a few clubs which include
+                Programming with C++, Reverse Engineering Club and a club for Programming with Arduino. I am intensively studying different types of 
+                Computer Architectures, Integrated Systems, Data Bases, Network System, Development of Network Systems etc. a.k.a all the stuff studied
+                in most Computer Science Bachelor degree programs in most universities. <br><br>
+            </p>
+            <h2>Contacts</h2>
+            <p>Discord: Arial#0560 <br>
+                Github: https://github.com/itsArial <br>
+                Email: itsarial@proton.me
+            </p>
+        </div>
+
+        <script>
+            // Elements for the scroll Event Listener
+
+            let stars = document.getElementById('stars');
+            let moon = document.getElementById('moon');
+            let mountains_behind = document.getElementById('mountains_behind');
+            let text = document.getElementById('text');
+            let btn = document.getElementById('btn');
+            let mountains_front = document.getElementById('mountains_front');
+            let header = document.querySelector('header');
+
+            window.addEventListener('scroll', function() {
+                let value = window.scrollY;
+                stars.style.left = value * 0.25 + 'px';
+                moon.style.top = value * 1.05 + 'px';
+                mountains_behind.style.top = value * 0.5 + 'px';
+                mountains_front.style.top = value * 0 + 'px';
+                text.style.marginRight = value * 4 + 'px';
+                btn.style.marginLeft = value * 4 + 'px';
+                header.style.top = value * 0.5 + 'px';
+            })
+        </script>
+    </body>
+</html>
