@@ -51,6 +51,7 @@ body::-webkit-scrollbar {
 
 .navigation__links a:hover {
     color: white;
+    transition: 2s;
 }
   
 
