@@ -59,8 +59,7 @@ header ul li a
     border-radius: 20px;
 }
 
-header ul li a:hover ,
-header ul li a.active
+header ul li a:hover
 {
     background: #fff;
     color: #2b1055;
@@ -113,10 +112,9 @@ section img#mountains_front
 #text
 {
     position: absolute;
-    right: -350px;
     color: #fff;
     white-space: nowrap;
-    font-size: 7.5vw;
+    font-size: 5vw;
     z-index: 9;
 }
 
