@@ -1,0 +1,208 @@
+@import url(https://fonts.googleapis.com/css2?family=Montserrat&display=swap);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+    scroll-behavior: smooth;
+    font-family: 'Montserrat', sans-serif;
+	background: rgb(25, 25, 30);
+	color: white;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+.navigation {
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    margin: 0;
+    width: 100vw;
+    height: 10vh;
+    background: rgb(20, 20, 25);
+    border-bottom: white 2px solid;
+}
+
+.navigation__logo {
+    font-size: 2vw;
+    font-weight: bold;
+    padding: 3.5vh;
+}
+
+.navigation__links {
+    display: flex;
+    padding: 3.5vh;
+}
+
+
+.navigation__links a {
+    color: gray;
+    text-decoration: none;
+    font-size: 2vw;
+    padding: 1vh;
+}
+
+.navigation__links a:hover {
+    color: white;
+}
+  
+
+.navigation__active {
+    border-bottom: 1vh solid #FFF;
+}
+
+#home {
+    padding-top: 10vh;
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+}
+
+.custom__color {
+    color: rgb(151, 70, 228);
+}
+
+.home__container {
+    display: flex;
+    margin: 5vw;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.home__container__info {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1vw;
+}
+
+.home__container__info h1 {
+    font-size: 3vw;
+    display:inline;
+}
+
+.home__container__info img {
+    display: block;
+    border-radius: 50%;
+    border: white 4px solid;
+}
+
+.home__container__welcome {
+    font-weight: bold;
+    font-size: 1.8vw;
+}
+
+.fade-in {
+    -webkit-animation-name: fadeIn;
+    animation-name: fadeIn;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+}
+
+@-webkit-keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+.fade-in-left {
+    -webkit-animation-name: fadeInLeft;
+    animation-name: fadeInLeft;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+}
+
+/* Fade in from left */
+@-webkit-keyframes fadeInLeft {
+    from {opacity: 0; -webkit-transform: translate3d(-100%, 0, 0); transform: translate3d(-100%, 0, 0);}
+    to {opacity: 1; -webkit-transform: none; transform: none;}
+}
+
+@keyframes fadeInLeft {
+    from {opacity: 0; -webkit-transform: translate3d(-100%, 0, 0); transform: translate3d(-100%, 0, 0);}
+    to {opacity: 1; -webkit-transform: none; transform: none;}
+}
+
+.fade-in-right {
+    -webkit-animation-name: fadeInRight;
+    animation-name: fadeInRight;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+}
+
+/* Fade in from right */
+@-webkit-keyframes fadeInRight {
+    from {opacity: 0; -webkit-transform: translate3d(100%, 0, 0); transform: translate3d(100%, 0, 0);}
+    to {opacity: 1; -webkit-transform: none; transform: none;}
+}
+@media screen and (max-width: 500px) {
+    .navigation {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .navigation__links {
+        display: none;
+    }
+
+    .navigation__logo {
+        font-size: 4vw;
+        padding: 3vh;
+    }
+
+    .navigation__links a {
+        font-size: 3vw;
+        padding: 1vh;
+    }
+
+    .home__container__info {
+        flex-direction: column;
+    }
+    
+    .home__container__info img {
+        display: none;
+    }
+}
+
+/* Fade in from the top */
+.fade-in-top {
+    -webkit-animation-name: fadeInTop;
+    animation-name: fadeInTop;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+@-webkit-keyframes fadeInTop {
+    from {opacity: 0; -webkit-transform: translate3d(0, -100%, 0); transform: translate3d(0, -100%, 0);}
+    to {opacity: 1; -webkit-transform: none; transform: none;}
+}
+
+.fade-in-bottom {
+    -webkit-animation-name: fadeInBottom;
+    animation-name: fadeInBottom;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+/* Fade in from the bottom */
+@-webkit-keyframes fadeInBottom {
+    from {opacity: 0; -webkit-transform: translate3d(0, 100%, 0); transform: translate3d(0, 100%, 0);}
+    to {opacity: 1; -webkit-transform: none; transform: none;}
+}
