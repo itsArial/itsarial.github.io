@@ -116,6 +116,7 @@ section img#mountains_front
     white-space: nowrap;
     font-size: 5vw;
     z-index: 9;
+    transition: 15ms;
 }
 
 #btn
@@ -129,6 +130,14 @@ section img#mountains_front
     font-size: 1.5em;
     z-index: 9;
     transform: translateY(100px);
+    transition: 15ms;
+}
+
+#btn:hover
+{
+    background-color: #7597de;
+    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.644);
+    transition: 0.3s;
 }
 
 .sec
